@@ -1,0 +1,8 @@
+{
+  "name": "MoviePickr",
+  "app_id": "907d9591",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

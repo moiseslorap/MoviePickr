@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-wrap *ngIf="item">{{item.Title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-wrap>
+  <ion-list *ngIf="item">
+    <ion-item>
+      <img width="120" height="180" [src]="item.Poster"/>
+    </ion-item>
+    <ion-item>
+      <b>Plot:</b> {{item.Plot}}
+    </ion-item>
+    <ion-item>
+      <b>Released:</b> {{item.Released}}
+    </ion-item>
+    <ion-item>
+      <b>Rating:</b> {{item.Rated}}
+    </ion-item>
+    <ion-item>
+      <b>Length:</b> {{item.Runtime}}
+    </ion-item>
+    <ion-item>
+      <b>Genre:</b> {{item.Genre}}
+    </ion-item>
+    <ion-item>
+      <b>Director:</b> {{item.Director}}
+    </ion-item>
+    <ion-item>
+      <b>writer(s):</b> {{item.Writer}}
+    </ion-item>
+    <ion-item>
+      <b>Actors:</b> {{item.Actors}}
+    </ion-item>
+    <ion-item>
+      <b>Awards:</b> {{item.Awards}}
+    </ion-item>
+    <ion-item>
+      <b>Metascore:</b> {{item.Metascore}}
+    </ion-item>
+    <ion-item>
+      <b>IMDBs Votes:</b> {{item.imdbVotes}}
+    </ion-item>
+  </ion-list>
+  <ion-list>
+  <ion-list-header>
+    Ratings
+  </ion-list-header>
+  
+      <ion-card *ngFor="let rating of ratings">
+          <ion-card-header>
+            {{rating.Source}}
+          </ion-card-header>
+          <ion-card-content>
+            {{rating.Value}}
+          </ion-card-content>
+        </ion-card>
+  </ion-list>
+
+
+</ion-content>
